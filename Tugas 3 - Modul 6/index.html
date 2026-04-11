@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Contoh jQuery</title>
+
+    <!-- CDN jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("h1").text("Hello, World!");
+      });
+    </script>
+
+    <!-- Efek hide/show -->
+    <script>
+      $(document).ready(function () {
+        $("#hide").click(function () {
+          $("p").hide();
+        });
+
+        $("#show").click(function () {
+          $("p").show();
+        });
+      });
+    </script>
+    <!-- Efek Animasi -->
+    <script>
+      $(document).ready(function () {
+        $("#animateBtn").click(function () {
+          $("div").animate({
+            height: "toggle",
+          });
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <h1>Hello</h1>
+    <!-- Penggunaan Efek Hide/Show -->
+    <p>Saya akan hilang jika tombol Hide diklik.</p>
+
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <!-- Penggunaan Efek Animasi -->
+    <button id="animateBtn">Start Animation</button>
+
+    <div
+      style="
+        background: #98bf21;
+        height: 100px;
+        width: 100px;
+        position: absolute;
+      "
+    ></div>
+  </body>
+</html>
